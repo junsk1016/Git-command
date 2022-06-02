@@ -24,3 +24,27 @@ git push origin master
 
 
 내가 파일을 새롭게 추가하고싶으면 git add . 하여 git commit -m "second commit"하고 git push origin master 하면 된다.
+
+
+다른 프로젝트를 같이 할 때는 아래와 같이 한다.  
+
+git clone 하고 뒤에 주소를 입력  
+
+master는 product라고 생각하면 되므로 새로운 branch를 파서 해야 한다.  
+
+git checkout -b junsik
++ junsik이라는 branch를 생성하는 것
+
+이후  
+git add .  
+git commit -m "second commit"  
+까지는 동일하나 push할 때 뒤에 master가 아닌 설정한 브랜치 이름을 넣어야 한다.  
+git push origin junsik  
+
+만약 마스터 브랜치에서 업데이트된 소스를 가져올 때는 pull 명령어를 사용한다.  
+하지만 pull 하기 전에 꼭 현재 브런치의 소스코드를 commmit을 시켜야 한다.  
+git pull origin master  
+
+참고로 브랜치끼리 이동하는 법은 아래와 같다.  
+
+git checkout branch_name  
